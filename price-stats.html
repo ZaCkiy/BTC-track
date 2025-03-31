@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack BTC Tracker - Statistik Harga Bitcoin</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Statistik Harga Bitcoin</h1>
+            <p>Data Historis dan Analisis Harga BTC/IDR</p>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+            <li><a href="about-bitcoin.html"><i class="fab fa-bitcoin"></i> Tentang Bitcoin</a></li>
+            <li><a href="about-investment.html"><i class="fas fa-chart-line"></i> Tentang Investasi</a></li>
+            <li class="active"><a href="price-stats.html"><i class="fas fa-coins"></i> Statistik Harga</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="price-stats-section">
+            <h2><i class="fas fa-chart-bar"></i> Statistik Harga Bitcoin (BTC/IDR)</h2>
+            
+            <div class="timeframe-selector">
+                <button class="timeframe-btn active" data-timeframe="24h">24 Jam</button>
+                <button class="timeframe-btn" data-timeframe="7d">7 Hari</button>
+                <button class="timeframe-btn" data-timeframe="30d">30 Hari</button>
+                <button class="timeframe-btn" data-timeframe="1y">1 Tahun</button>
+                <button class="timeframe-btn" data-timeframe="all">Semua</button>
+            </div>
+            
+            <div class="price-chart-container">
+                <canvas id="priceChart"></canvas>
+            </div>
+            
+            <div class="price-stats-grid">
+                <div class="stat-card">
+                    <h3><i class="fas fa-arrow-up"></i> Tertinggi 24 Jam</h3>
+                    <p id="24h-high">Memuat...</p>
+                </div>
+                <div class="stat-card">
+                    <h3><i class="fas fa-arrow-down"></i> Terendah 24 Jam</h3>
+                    <p id="24h-low">Memuat...</p>
+                </div>
+                <div class="stat-card">
+                    <h3><i class="fas fa-exchange-alt"></i> Volume 24 Jam</h3>
+                    <p id="24h-volume">Memuat...</p>
+                </div>
+                <div class="stat-card">
+                    <h3><i class="fas fa-percentage"></i> Perubahan 24 Jam</h3>
+                    <p id="24h-change">Memuat...</p>
+                </div>
+            </div>
+            
+            <div class="historical-data">
+                <h3><i class="fas fa-table"></i> Data Historis</h3>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Harga (IDR)</th>
+                            <th>Perubahan</th>
+                            <th>Volume (BTC)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historical-data">
+                        <!-- Data akan diisi oleh JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="market-summary">
+                <h3><i class="fas fa-info-circle"></i> Ringkasan Pasar</h3>
+                <div class="summary-cards">
+                    <div class="summary-card">
+                        <h4>Kapitalisasi Pasar</h4>
+                        <p id="market-cap">Memuat...</p>
+                    </div>
+                    <div class="summary-card">
+                        <h4>Peringkat Pasar</h4>
+                        <p id="market-rank">1</p>
+                    </div>
+                    <div class="summary-card">
+                        <h4>Pasokan Beredar</h4>
+                        <p id="circulating-supply">Memuat...</p>
+                    </div>
+                    <div class="summary-card">
+                        <h4>Pasokan Maksimum</h4>
+                        <p>21,000,000 BTC</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Jack BTC Tracker. Dibuat dengan <i class="fas fa-heart"></i> oleh @jackiy</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/chart.js"></script>
+</body>
+</html>
