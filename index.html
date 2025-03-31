@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack BTC Tracker - Beranda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Jack BTC Tracker</h1>
+            <p>Pelacak Harga Bitcoin & Analisis Pasar</p>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar">
+        <ul>
+            <li class="active"><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+            <li><a href="about-bitcoin.html"><i class="fab fa-bitcoin"></i> Tentang Bitcoin</a></li>
+            <li><a href="about-investment.html"><i class="fas fa-chart-line"></i> Tentang Investasi</a></li>
+            <li><a href="price-stats.html"><i class="fas fa-coins"></i> Statistik Harga</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="price-section">
+            <h2><i class="fas fa-dollar-sign"></i> Harga Bitcoin Hari Ini (BTC/IDR)</h2>
+            <div class="price-display">
+                <div class="price-box">
+                    <h3>Harga Saat Ini</h3>
+                    <p id="current-price">Memuat...</p>
+                </div>
+                <div class="price-change">
+                    <h3>Perubahan 24 Jam</h3>
+                    <p id="price-change">Memuat...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="indicator-section">
+            <div class="indicator-box">
+                <h2><i class="fas fa-wave-square"></i> Indikator RSI (Relative Strength Index)</h2>
+                <div class="chart-container">
+                    <canvas id="rsiChart"></canvas>
+                </div>
+                <p class="indicator-desc">RSI saat ini: <span id="current-rsi">Memuat...</span></p>
+            </div>
+
+            <div class="indicator-box">
+                <h2><i class="fas fa-chart-line"></i> Indikator MA (Moving Average)</h2>
+                <div class="chart-container">
+                    <canvas id="maChart"></canvas>
+                </div>
+                <p class="indicator-desc">MA 50 hari: <span id="ma-50">Memuat...</span> | MA 200 hari: <span id="ma-200">Memuat...</span></p>
+            </div>
+        </section>
+
+        <section class="quick-stats">
+            <h2><i class="fas fa-tachometer-alt"></i> Statistik Cepat</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>24 Jam</h3>
+                    <p id="24h-high">Tinggi: Memuat...</p>
+                    <p id="24h-low">Rendah: Memuat...</p>
+                </div>
+                <div class="stat-card">
+                    <h3>7 Hari</h3>
+                    <p id="7d-change">Perubahan: Memuat...</p>
+                </div>
+                <div class="stat-card">
+                    <h3>30 Hari</h3>
+                    <p id="30d-change">Perubahan: Memuat...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2023 Jack BTC Tracker. Dibuat dengan <i class="fas fa-heart"></i> oleh @jackiy</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/chart.js"></script>
+</body>
+</html>
